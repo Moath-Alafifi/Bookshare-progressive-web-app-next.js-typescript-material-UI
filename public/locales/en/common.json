@@ -1,0 +1,18 @@
+{
+  "home": "home",
+  "navigationBar": "Navigation Bar",
+  "dark": "dark mode",
+  "light": "light mode",
+  "credits": "Credits",
+  "activity": "Activity",
+  "library": "Library",
+  "myCredits": "My Credits",
+  "books": "Books",
+  "followers": "Followers",
+  "following": "Following",
+  "categories": "Categories",
+  "people": "People",
+  "myBooks": "My Books",
+  "booksIGot": "Books I Got",
+  "booksIGave": "Books I Gave"
+}

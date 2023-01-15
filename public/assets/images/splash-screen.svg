@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg style="background-color:#2BA952" viewBox="52.239 63.012 375 812" xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<filter id="g" x="151.56" y="370.24" width="162.44" height="162.44" filterUnits="userSpaceOnUse">
+<feOffset dy="5"/>
+<feGaussianBlur result="A" stdDeviation="5"/>
+<feFlood flood-opacity=".122"/>
+<feComposite in2="A" operator="in"/>
+<feComposite in="SourceGraphic"/>
+</filter>
+<linearGradient id="a" x1=".743" x2=".443" y1="1.521" y2=".314">
+<stop stop-color="#f17f40" offset="0"/>
+<stop stop-color="#f28843" offset=".068"/>
+<stop stop-color="#f8a950" offset=".325"/>
+<stop stop-color="#fbc058" offset=".572"/>
+<stop stop-color="#fecf5e" offset=".803"/>
+<stop stop-color="#2BA952" offset="1"/>
+</linearGradient>
+<linearGradient id="f" x1=".763" x2=".408" y1="1.571" y2=".189" xlink:href="#a"/>
+<linearGradient id="e" x1=".507" x2=".498" y1=".566" y2=".085" xlink:href="#a"/>
+<linearGradient id="d" x1="1.119" x2="-.188" y1="1.047" y2="-.107" xlink:href="#a"/>
+<linearGradient id="c" x1=".309" x2="1.478" y1=".493" y2="1.039">
+<stop stop-color="#393e46" offset="0"/>
+<stop stop-color="#877950" stop-opacity=".604" offset=".248"/>
+<stop stop-color="#c9ab58" stop-opacity=".271" offset=".523"/>
+<stop stop-color="#f1c95e" stop-opacity=".071" offset=".78"/>
+<stop stop-color="#2BA952" stop-opacity="0" offset="1"/>
+</linearGradient>
+<linearGradient id="b" x1="-2.413" x2="4.512" y1="1.951" y2="-1.499">
+<stop stop-color="#f07b3f" offset="0"/>
+<stop stop-color="#2BA952" offset="1"/>
+</linearGradient>
+</defs>
+<text fill="#ffffff" font-family="Avenir, sans-serif" font-size="31" font-weight="900"><tspan x="151.555" y="564.242">BookHood</tspan></text>
+<g transform="translate(82.555 -103.76)">
+<g transform="translate(-82.55 103.76)" filter="url(#g)">
+<path transform="translate(166.55 380.24)" d="M91.607 0h-50.77C26.446 0 17.323.056 8.7 8.679.054 17.323 0 26.489 0 40.837v50.77c0 14.393.056 23.516 8.679 32.139 8.649 8.649 17.812 8.7 32.158 8.7h50.77c14.391 0 23.514-.054 32.138-8.679 8.643-8.643 8.7-17.812 8.7-32.158V40.837c0-14.391-.055-23.514-8.679-32.138C115.118.05 105.954 0 91.607 0z" fill="#fff"/>
+</g>
+<path d="M181.819 499.484l-.028 6.585-55.157 9.663-4.374.175c-.11.004-.22.019-.327.045l-10.673 2.695.011-1.911c.02-2.542 1.886-4.691 4.4-5.068l63.116-14.973c.151-.038.307-.051.462-.039 1.461.132 2.578 1.361 2.57 2.828z" fill="url(#a)"/>
+<path d="M178.833 496.695c.776-.046 1.537.225 2.108.751s.906 1.262.925 2.039l-.028 6.585-59.531 9.837 25.469-11.786z" fill="url(#f)"/>
+<path d="m186.94 535.06 0.167-30.253-60.946 10.837" fill="url(#e)"/>
+<path d="M189.222 518.934v82.086c0 1.708-1.81 3.095-4.042 3.095h-69.89c-2.238 0-4.048-1.387-4.048-3.095l.006-82.252a.82.82 0 0 1 .017-.124.49.49 0 0 1 .011-.09c.242-1.533 1.945-2.717 4.014-2.717h8.659l2.683-.107-.468.107h59.165a5.08 5.08 0 0 1 1.55.288 3.16 3.16 0 0 1 2.343 2.809z" fill="url(#d)"/>
+<path d="m150.03 532.17 38.777 19.17-0.111 45.032-59.331-8.6" fill="url(#c)" opacity=".29"/>
+<path d="m150.03 532.17v55.607h-20.667v-35.718a19.46 19.46 0 0 1 6.071-14.043 21 21 0 0 1 14.596-5.846z" fill="#fff"/>
+<circle cx="146.99" cy="562.53" r="1.834" fill="url(#b)"/>
+<path d="M169.659 552.7v33.65h-13.067v.006h-4.4l.214-51.909 1.866.434c.858.236 1.703.519 2.531.846a21.67 21.67 0 0 1 9.375 6.94l.288.383c.056.09.13.18.192.276l.31.462a11.74 11.74 0 0 1 .35.564l.338.586c.112.197.209.395.3.6l.288.592.265.632.237.626.338 1.094a4.32 4.32 0 0 1 .085.311l.124.53s.079.355.107.53l.073.451.13 1.032a12.76 12.76 0 0 1 .039.676l.017.688z" fill="#fff"/>
+<path d="M156.804 535.723l-.209 50.63h-4.4l.214-51.909 1.866.434a24.68 24.68 0 0 1 2.529.845z" fill="#efefef"/>
+</g>
+<g fill="#fff">
+<circle transform="matrix(-.86602 .5 -.5 -.86602 233.48 74.478)" cx="43" cy="43" r="43" opacity=".206"/>
+<circle transform="matrix(-.86602 .5 -.5 -.86602 479.48 703.48)" cx="43" cy="43" r="43" opacity=".206"/>
+<circle transform="matrix(-.86602 .5 -.5 -.86602 91.524 209.52)" cx="33.5" cy="33.5" r="33.5" opacity=".206"/>
+<circle transform="matrix(-.86602 .5 -.5 -.86602 308.37 889.02)" cx="49" cy="49" r="49" opacity=".206"/>
+<circle transform="matrix(-.86602 .5 -.5 -.86602 233.28 223.28)" cx="19.5" cy="19.5" r="19.5" opacity=".206"/>
+<circle transform="matrix(-.86602 .5 -.5 -.86602 415.28 851.28)" cx="19.5" cy="19.5" r="19.5" opacity=".206"/>
+</g>
+</svg>

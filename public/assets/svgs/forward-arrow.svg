@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="arrow-ios-back" transform="translate(20.946 20.946) rotate(180)">
+    <rect id="Rectangle" width="21" height="21" transform="translate(20.946 -0.054) rotate(90)" fill="#393e46" opacity="0"/>
+    <path id="Path" d="M5.095,12.219a.873.873,0,0,1-.681-.323L.2,6.66a.873.873,0,0,1,0-1.108L4.562.315A.874.874,0,0,1,5.906,1.432L2.005,6.11l3.77,4.678a.873.873,0,0,1-.681,1.431Z" transform="translate(6.975 4.363)" fill="#393e46"/>
+  </g>
+</svg>

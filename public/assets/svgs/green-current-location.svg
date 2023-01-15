@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="60.668" height="60.668" viewBox="0 0 60.668 60.668" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="Oval" x="12" y="6" width="36.668" height="36.668" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#00245e" flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Oval-2" x="0" y="0" width="60.668" height="60.668" filterUnits="userSpaceOnUse">
+      <feOffset dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-2"/>
+      <feFlood flood-color="#00245e" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Triangle" x="13.984" y="1.519" width="32.699" height="32.156" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-3"/>
+      <feFlood flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_103" data-name="Group 103" transform="matrix(1, 0, 0, 1, -188.25, -600.25)">
+    <g id="Oval-3" data-name="Oval" transform="translate(206.25 618.25)">
+      <g transform="matrix(1, 0, 0, 1, -18, -6)" filter="url(#Oval)">
+        <circle id="Oval-4" data-name="Oval" cx="12.334" cy="12.334" r="12.334" transform="translate(18 6)" fill="#ffd460"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -18, -6)" filter="url(#Oval-2)">
+        <circle id="Oval-5" data-name="Oval" cx="12.334" cy="12.334" r="12.334" transform="translate(18 6)" style="fill: rgb(43, 169, 82);"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 188.25, 612.25)" filter="url(#Triangle)">
+      <path id="Triangle-2" data-name="Triangle" d="M4.752,1.449a.619.619,0,0,1,1.088,0L9.572,8.381a.613.613,0,0,1-.7.88L5.449,8.393a.622.622,0,0,0-.306,0l-3.426.868a.613.613,0,0,1-.7-.88Z" transform="translate(25.04 12.39)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

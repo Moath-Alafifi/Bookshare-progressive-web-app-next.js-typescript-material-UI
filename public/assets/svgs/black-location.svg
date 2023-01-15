@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 24 24" width='24' height='24' xmlns="http://www.w3.org/2000/svg">
+<defs>
+<clipPath id="a">
+<rect transform="translate(166 342)" width="24" height="24" fill="#fff" stroke="#707070"/>
+</clipPath>
+</defs>
+<g transform="translate(-166 -342)" clip-path="url(#a)">
+<path transform="translate(162.59 341)" d="M16.132,4.022Q15.852,4,15.572,4t-.559.022a6.313,6.313,0,0,0-4.777,9.425l1.786,3.192,3.551,6.326,3.551-6.326,1.786-3.192A6.313,6.313,0,0,0,16.132,4.022Zm-.559,9.4a3.339,3.339,0,1,1,3.343-3.343A3.346,3.346,0,0,1,15.572,13.425Z"  />
+</g>
+</svg>
