@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { AppBar, Tab, Tabs } from '@mui/material'
 import { tabsData } from './tabsData'
 import { useRouter } from 'next/router'
@@ -8,16 +8,9 @@ import { SCSvgIcons } from '@/components/shared'
 
 const BottomNavigationBar = () => {
   const router = useRouter()
-  const pathName = router.pathname
-  const tabNewPath = pathName === '/' ? 'home' : pathName.replace('/', '')
 
-  const [value, setValue] = useState<string>(tabNewPath)
-
+  const [value, setValue] = useState<string>('/')
   const { t } = useTranslation(['common'])
-
-  useEffect(() => {
-    setValue(tabNewPath)
-  }, [pathName])
 
   const handleChange = (event: React.SyntheticEvent, tabNewValue: string) => {
     setValue(tabNewValue)
@@ -39,7 +32,7 @@ const BottomNavigationBar = () => {
             key={tabInfo.id}
             icon={<SCSvgIcons icon={tabInfo.icon} color="primary" />}
             onClick={() => router.push(tabInfo.path)}
-            value={tabInfo.value}
+            value={tabInfo.path}
             label={tabInfo.tabName}
             sx={STTab}
           />
