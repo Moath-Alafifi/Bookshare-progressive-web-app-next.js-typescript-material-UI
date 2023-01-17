@@ -1,7 +1,7 @@
 export const STOwnersText = {
-  color: 'secondary.dark',
   mt: 3,
   justifyContent: 'center',
+  color:'text.secondary'
 }
 export const STAvatar = {
   width: '30vw',
@@ -17,12 +17,9 @@ export const STOwnersInfoContainer = {
   justifyContent: 'center',
   gap: 1,
   width: '70vw',
-  color: 'secondary.dark',
+  color: 'text.secondary'
 }
-export const STOwner = {
-  color: 'primary.main',
-}
+export const STOwner = { color: 'secondary.contrastText',}
 export const STButton = {
   justifyContent: 'space-between',
-  color: 'primary.main',
 }

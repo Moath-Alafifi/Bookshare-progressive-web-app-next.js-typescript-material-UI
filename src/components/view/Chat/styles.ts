@@ -2,12 +2,11 @@ export const STTime = {
   marginLeft: 'auto',
   alignSelf: 'flex-start',
   justifySelf: 'flex-end',
-  color: 'primary.main',
+  color: 'text.hint',
 }
 
 export const STTitle = {
   mb: 4,
-  color: 'primary.main',
 }
 export const STContainer = {
   flexDirection: 'row',
@@ -21,22 +20,22 @@ export const STInviteFriend = {
   alignItems: 'center',
   textAlign: 'center',
   width: 270,
-  backgroundColor: 'primary.light',
+  backgroundColor: 'background.paper',
   borderRadius: 2,
   height: 50,
-  mt:10
+  mt: 10,
 }
 export const STInActiveBadge = {
   '& .MuiBadge-badge': {
-    backgroundColor: '#707070',
-    color: '#707070',
+    backgroundColor: 'primary.main',
+    color: 'primary.main',
     boxShadow: `0 0 0 2px #fff`,
   },
 }
 export const STActiveBadge = {
   '& .MuiBadge-badge': {
-    backgroundColor: '#0288d1',
-    color: '#0288d1',
+    backgroundColor: 'primary.main',
+    color: 'primary.main',
     boxShadow: `0 0 0 2px #fff`,
     '&::after': {
       position: 'absolute',
@@ -60,4 +59,10 @@ export const STActiveBadge = {
       opacity: 0,
     },
   },
+}
+export const STMessageText = {
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+  color: 'text.secondary',
 }

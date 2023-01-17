@@ -1,5 +1,5 @@
 import { Stack, Typography } from '@mui/material'
-import { STbookName, STOwner, STOwnerContainer } from './styles'
+import { STBookDescription, STButton, STOwner, STOwnerContainer } from './styles'
 import {
   UserAvatar,
   SCButton,
@@ -15,19 +15,20 @@ const OneBookOwner = ({ ownersData }: IOwnersData) => {
       {ownersData.map((owner) => (
         <Stack key={owner.id} sx={STOwnerContainer}>
           <UserAvatar avatar={owner.avatar} size="md" />
-          <Typography component="p" variant="body1">
+          <Typography component="p" color="text.secondary" variant="body1">
             Owned by
             <Typography sx={STOwner} component="span" variant="body1">
               {owner.owner}
             </Typography>
           </Typography>
           <UserLocation userLocation={owner.distance} />
-          <Typography component="p" variant="subtitle2" sx={STbookName}>
+          <Typography component="p" variant="subtitle2" sx={STBookDescription}>
             {owner.bookDescription}
           </Typography>
           <SCButton
             text="Chat to Swap or Exchange"
-            buttonSize='xl'
+            buttonSize="xl"
+            styles={STButton}
             startIcon={<SCSvgIcons icon={Chat} color="inherit" />}
           />
         </Stack>

@@ -1,7 +1,4 @@
 export const STContainer = {
- 
-  alignItems:"center",
-  justifyContent:"space-between",
-  color:"#000",
+  alignItems: 'center',
+  justifyContent: 'space-between',
 }
- 

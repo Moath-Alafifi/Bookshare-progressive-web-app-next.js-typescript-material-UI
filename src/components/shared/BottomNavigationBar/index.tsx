@@ -8,8 +8,11 @@ import { SCSvgIcons } from '@/components/shared'
 
 const BottomNavigationBar = () => {
   const router = useRouter()
+  const pathName = router.pathname
+  const tapDefaultValue =
+    pathName === '/' ? 'home' : pathName.replace('/', '').replace(/\/.*/, '')
 
-  const [value, setValue] = useState<string>('/')
+  const [value, setValue] = useState<string>(tapDefaultValue)
   const { t } = useTranslation(['common'])
 
   const handleChange = (event: React.SyntheticEvent, tabNewValue: string) => {
@@ -17,7 +20,7 @@ const BottomNavigationBar = () => {
   }
 
   return (
-    <AppBar color="secondary" enableColorOnDark={true} sx={STAppBar}>
+    <AppBar enableColorOnDark={true} sx={STAppBar}>
       <Tabs
         sx={STTabs}
         value={value}
@@ -30,9 +33,9 @@ const BottomNavigationBar = () => {
         {tabsData(t).map((tabInfo) => (
           <Tab
             key={tabInfo.id}
-            icon={<SCSvgIcons icon={tabInfo.icon} color="primary" />}
+            icon={<SCSvgIcons icon={tabInfo.icon} color="inherit" />}
             onClick={() => router.push(tabInfo.path)}
-            value={tabInfo.path}
+            value={tabInfo.value}
             label={tabInfo.tabName}
             sx={STTab}
           />

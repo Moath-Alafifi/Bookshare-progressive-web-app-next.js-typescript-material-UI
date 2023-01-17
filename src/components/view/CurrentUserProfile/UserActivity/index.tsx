@@ -1,6 +1,7 @@
 import { SCBookTile, SCPersonTile, SCDivider } from '@/components/shared'
 import { IMAGES } from '@/constants'
 import React from 'react'
+import FollowedActivityBody from './PersonTile'
 
 const activityData = [
   {
@@ -10,6 +11,7 @@ const activityData = [
     avatar: IMAGES.avatarPlaceholder,
     userName: 'Maria Benson ',
     readingLevel: 'Novice Reader',
+    date: new Date().toDateString().toString(),
   },
   {
     id: 2,
@@ -33,8 +35,8 @@ const UserActivity = () => {
       {activityData.map((behavior: any) => (
         <React.Fragment key={behavior.id}>
           {behavior.verb === 'followed' ? (
-            <SCPersonTile
-              readingLevel={behavior.readingLevel}
+            <FollowedActivityBody
+              date={behavior.date}
               avatar={behavior.avatar}
               userName={behavior.userName}
             />

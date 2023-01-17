@@ -7,7 +7,6 @@ export const STInfoContainer = {
   flexDirection: 'column',
   ml: 2,
   gap: 1,
-  color: 'primary.main',
 }
 export const STChip = {
   flexDirection: 'row-reverse',
@@ -21,7 +20,7 @@ export const STChip = {
 export const STSvgIconContainer = {
   width: 42,
   height: 42,
-  backgroundColor: 'primary.main',
+  backgroundColor: 'background.paper',
   borderRadius: '5px',
   display: 'flex',
   alignItems: 'center',

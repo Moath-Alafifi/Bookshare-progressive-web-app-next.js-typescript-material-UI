@@ -29,8 +29,9 @@ const LibraryView = () => {
     <>
       <Stack sx={STButtonContainer}>
         <SCButton
+          styles={{ color: 'primary.contrastText' }}
           text="Add a new book"
-          startIcon={<SCSvgIcons icon={Plus} />}
+          startIcon={<SCSvgIcons icon={Plus} color="inherit" />}
           buttonSize="md"
         />
       </Stack>

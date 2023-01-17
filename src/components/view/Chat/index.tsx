@@ -4,6 +4,7 @@ import {
   STContainer,
   STInActiveBadge,
   STInviteFriend,
+  STMessageText,
   STTime,
   STTitle,
 } from './styles'
@@ -17,14 +18,14 @@ const ChatData = [
     verb: 'followed',
     avatar: IMAGES.avatarPlaceholder,
     userName: 'Maria Benson ',
-    readingLevel: 'Novice Reader',
+    lastMessage: 'Speaking of which, Peter really…',
     time: '10:10',
   },
   {
     id: 2,
     avatar: IMAGES.avatarPlaceholder,
     userName: 'Maria Benson ',
-    readingLevel: 'Novice Reader',
+    lastMessage: 'Speaking of which, Peter really…',
     date: new Date().toDateString().toString(),
     time: '10:10',
   },
@@ -33,7 +34,8 @@ const ChatData = [
     avatar: IMAGES.avatarPlaceholder,
     cover: IMAGES.bookCoverPlaceholder,
     userName: 'Maria Benson ',
-    readingLevel: 'Novice Reader',
+    lastMessage:
+      'Speaking of whiching of which, Ping of which, P, Peter really ',
     time: '10:10',
   },
 ]
@@ -56,16 +58,12 @@ const ChatView = () => {
               <SCUserAvatar avatar={user.avatar} size="md" />
             </Badge>
 
-            <Stack
-              sx={{ flexDirection: 'column' }}
-              gap={0.5}
-              color="primary.main"
-            >
+            <Stack sx={{ flexDirection: 'column', minWidth: 0 }} gap={1}>
               <Typography component="p" variant="subtitle1">
                 {user.userName}
               </Typography>
-              <Typography component="p" variant="subtitle1">
-                {user.readingLevel}
+              <Typography component="p" sx={STMessageText} variant="subtitle2">
+                {user.lastMessage}
               </Typography>
             </Stack>
 
@@ -78,14 +76,10 @@ const ChatView = () => {
       ))}
       <Stack justifyContent="center">
         <Stack sx={STInviteFriend}>
-          <Typography
-            sx={{ color: 'primary.main' }}
-            variant="subtitle1"
-            component="p"
-          >
+          <Typography variant="subtitle1" component="p">
             Invite a friend in your BookHood and earn
             <Typography
-              sx={{ color: '#0288d1', pl: 1 }}
+              sx={{ pl: 1, color: 'primary.main' }}
               variant="subtitle1"
               component="span"
             >

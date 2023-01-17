@@ -1,7 +1,7 @@
 export const STButton = {
-  color: '#fff',
   p: 'unset',
   textTransform: 'capitalize',
+  color:'secondary.contrastText',
   xl: {
     height: 52,
     fontSize: '0.9375rem', // 15px

@@ -3,5 +3,6 @@ interface ITabData {
   icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
   tabName: string
   path: string
+  value:string
 }
 export default ITabData

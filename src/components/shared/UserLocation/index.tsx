@@ -1,13 +1,14 @@
 import IUserLocation from './interfaces'
 import { BlackLocation } from '@/constants'
 import SCChip from '../Chip'
+import { STUserLocation } from './styles'
 
 const SCUserLocation = ({ userLocation }: IUserLocation) => {
   return (
     <SCChip
       icon={BlackLocation}
       label={`${userLocation}`}
-      styles={{ '& .MuiChip-label': { p: 'unset', fontSize: '.875rem' } }}
+      styles={STUserLocation}
     />
   )
 }

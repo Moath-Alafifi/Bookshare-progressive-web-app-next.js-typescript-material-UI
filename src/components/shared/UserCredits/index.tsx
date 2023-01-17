@@ -6,13 +6,7 @@ import { SCChip } from '@/components/shared'
 const SCUserCredits = ({ creditsNum }: IUserCredits) => {
   const { t } = useTranslation('common')
 
-  return (
-    <SCChip
-      icon={Diamond}
-      label={`${creditsNum} ${t('credits')}`}
-     
-    />
-  )
+  return <SCChip icon={Diamond} label={`${creditsNum} ${t('credits')}`} />
 }
 
 export default SCUserCredits

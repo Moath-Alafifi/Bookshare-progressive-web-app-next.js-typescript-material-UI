@@ -8,4 +8,6 @@ export const getStaticProps = async ({ locale = 'en' }: any) => ({
     ...(await serverSideTranslations(locale, ['common'])),
   },
 })
+
+
 export default explorePage

@@ -7,7 +7,6 @@ import IBookCategories from '../BookItemBody/interfaces'
 import IBookFilterHandler from './interfaces'
 import {
   STCategoriesContainer,
-  STCategoriesText,
   STCategoriesButton,
   STMenu,
   STFilteredText,
@@ -71,7 +70,7 @@ const BookFilterHandler = ({
         placeholder="Search for a book by title or author"
       />
       <Stack sx={STCategoriesContainer}>
-        <Typography component="p" sx={STCategoriesText}>
+        <Typography component="p" variant="h2">
           {t('categories')}
         </Typography>
         <Button
@@ -82,8 +81,7 @@ const BookFilterHandler = ({
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClickListItem}
           variant="outlined"
-          color="primary"
-          endIcon={<SCSvgIcons icon={DropdownArrow} color='primary' />}
+          endIcon={<SCSvgIcons icon={DropdownArrow} color="inherit" />}
         >
           {options[selectedIndex]}
         </Button>

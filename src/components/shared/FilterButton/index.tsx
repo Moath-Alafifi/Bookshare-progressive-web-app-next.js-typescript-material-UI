@@ -9,18 +9,17 @@ const SCFilterButton = (props: TextFieldProps) => {
       type="search"
       fullWidth={true}
       size="small"
-      color="primary"
       focused={false}
       sx={STTextFiled}
       InputProps={{
         startAdornment: (
           <InputAdornment disablePointerEvents={true} position="start">
-            <SCSvgIcons icon={Search} color="primary" />
+            <SCSvgIcons icon={Search} color="disabled" />
           </InputAdornment>
         ),
         endAdornment: (
           <InputAdornment disablePointerEvents={true} position="end">
-            <SCSvgIcons icon={Filter} color="primary" />
+            <SCSvgIcons icon={Filter} color="disabled" />
           </InputAdornment>
         ),
       }}

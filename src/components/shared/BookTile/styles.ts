@@ -5,7 +5,7 @@ export const STContainer = {
 }
 export const STBookInfoContainer = {
   flexDirection: 'column',
-  color: 'primary.main',
+  minWidth:0,
   gap: 1,
 }
 export const STBookStateContainer = {

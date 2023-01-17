@@ -1,12 +1,11 @@
 export const STbookName = {
   mt: 1,
   textAlign: 'center',
-  color: 'primary.main',
 }
 
 export const STAuthor = {
   textAlign: 'center',
-  color: 'secondary.dark',
+  color: 'text.secondary',
   mt: 1,
 }
 
@@ -15,10 +14,10 @@ export const STCategory = {
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: 1,
-  backgroundColor: 'primary.light',
-  color: '#0288d1',
+  backgroundColor: 'secondary.main',
+  color: 'primary.light',
   width: 80,
   height: 30,
 }
 
-export const STContainer = { alignItems: 'center',  flexDirection: 'column', }
+export const STContainer = { alignItems: 'center', flexDirection: 'column' }

@@ -76,16 +76,23 @@ const ExplorePeople = () => {
                 readingLevel={user.readingLevel}
                 avatar={user.avatar}
               />
-              <SCButton
-                buttonSize="sm"
-                color={user.followed === true ? 'info' : 'status'}
-                text={user.followed === true ? 'unFollow' : 'follow'}
-                onClick={
-                  user.followed === true
-                    ? () => handleUnFollowed(user.id)
-                    : () => handleFollowed(user.id)
-                }
-              />
+              {user.followed === true ? (
+                <SCButton
+                  buttonSize="sm"
+                  color="primary"
+                  text="unFollow"
+                  styles={{ color: 'primary.contrastText' }}
+                  onClick={() => handleUnFollowed(user.id)}
+                />
+              ) : (
+                <SCButton
+                  buttonSize="sm"
+                  color="secondary"
+                  text="follow"
+                  styles={{ color: 'text.secondary' }}
+                  onClick={() => handleFollowed(user.id)}
+                />
+              )}
             </Stack>
             {isFollow[isFollow.length - 1] !== user && <SCDivider />}
           </React.Fragment>

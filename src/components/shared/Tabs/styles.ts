@@ -1,7 +1,7 @@
 export const STTabList = {
   mt: 2,
   '&	.MuiTabs-indicator': { display: 'none' },
-  '&	.MuiButtonBase-root': { p: 'unset', minHeight: 24 },
+  '&	.MuiButtonBase-root': { p: 'unset', minHeight: 24, minWidth: 'unset' },
 }
 
 export const STTabText = {

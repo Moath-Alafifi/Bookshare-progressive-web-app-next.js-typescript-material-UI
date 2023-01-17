@@ -25,14 +25,7 @@ const bookOwners = {
       distance: '50 kilometers',
       bookDescription:
         '  Lorem ipsum dolor sit amet, consecteturfds  wegwe we g erg e adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    }, {
-      id: 2,
-      owner: ' Tom Reeves',
-      avatar: IMAGES.avatarPlaceholder,
-      distance: '50 kilometers',
-      bookDescription:
-        '  Lorem ipsum dolor sit amet, consecteturfds  wegwe we g erg e adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    },
+    } 
   ],
 }
 

@@ -9,6 +9,7 @@ import {
 import ActivityBody from '@/components/view/CurrentUserProfile/UserActivity'
 import { useTranslation } from 'next-i18next'
 import UserCredits from './UserCredits'
+import { STTabs } from './styles'
 
 const profileData = {
   userName: 'moath alafifi',
@@ -59,10 +60,7 @@ const ProfileView = () => {
       <SCTabs
         tabsData={tabsData(t)}
         defaultValue="Activity"
-        style={{
-          '& .MuiTabs-flexContainer': { justifyContent: 'flex-start' },
-          '& .MuiButtonBase-root': { alignItems: 'flex-start' },
-        }}
+        style={STTabs}
       />
     </>
   )

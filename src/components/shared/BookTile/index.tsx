@@ -23,17 +23,25 @@ const SCBookTile = ({
     <Stack sx={STContainer}>
       <SCBookCover cover={cover} title={bookName} size="xs" />
       <Stack sx={STBookInfoContainer}>
-        <Typography component="p" variant="subtitle2">
+        <Typography component="p" color="text.secondary" variant="subtitle2">
           {date}
         </Typography>
-        <Typography component="p" variant="subtitle1">
+        <Typography
+          component="p"
+          sx={{
+            textOverflow: 'ellipsis',
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+          }}
+          variant="subtitle1"
+        >
           {description}
         </Typography>
         {!isBookStateHidden && (
           <Stack sx={STBookStateContainer}>
             <SCSvgIcons
               icon={bookState === 'Public' ? Public : Private}
-              color={bookState === 'Public' ? 'info' : 'disabled'}
+              color={bookState === 'Public' ? 'primary' : 'disabled'}
             />
             <Typography component="p" variant="subtitle1">
               {bookState}
@@ -43,7 +51,7 @@ const SCBookTile = ({
       </Stack>
       {!isEditIconHidden && (
         <Box sx={STEditIcon}>
-          <SCSvgIcons icon={Edit} />
+          <SCSvgIcons icon={Edit} color="disabled" />
         </Box>
       )}
     </Stack>

@@ -1,4 +1,4 @@
-export const container ={
+export const STContainer ={
     xxl: {
         width: 96,
         height: 96,

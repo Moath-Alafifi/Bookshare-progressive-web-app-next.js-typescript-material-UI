@@ -3,12 +3,12 @@ export const STAppBar = {
   top: 'auto',
   bottom: 0,
   height: 80,
-  color: '#fff',
+
+  backgroundColor: 'background.paper',
 }
 
 export const STTabs = {
   '&  .Mui-selected': {
-    color: 'primary.dark',
     opacity: 1,
   },
   '&	.MuiTabs-indicator': {
@@ -16,17 +16,17 @@ export const STTabs = {
     display: 'flex',
     justifyContent: 'center',
     backgroundColor: 'transparent',
-    color: 'primary',
 
     '&  > span': {
       width: '50% ',
-      backgroundColor: 'primary.dark',
+      backgroundColor: 'primary.main',
     },
   },
 }
 export const STTab = {
+  minWidth: 50,
+  p: 0,
   textTransform: 'capitalize',
   justifyContent: 'space-evenly',
-  color: 'primary.dark',
   opacity: 0.7,
 }

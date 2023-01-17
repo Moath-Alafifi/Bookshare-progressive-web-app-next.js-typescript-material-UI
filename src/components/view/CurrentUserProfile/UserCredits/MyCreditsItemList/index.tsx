@@ -33,7 +33,7 @@ const MyCreditsItemList = ({
         <Typography component="p" variant="subtitle2">
           {title}
         </Typography>
-        <Typography component="p" variant="subtitle2">
+        <Typography component="p" color='text.secondary' variant="subtitle2">
           {date}
         </Typography>
       </Stack>

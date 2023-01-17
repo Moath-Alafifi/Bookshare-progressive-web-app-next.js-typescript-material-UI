@@ -6,11 +6,12 @@ const SCButton = ({
   buttonSize,
   startIcon,
   text,
+  styles,
   ...props
 }: IButton & ButtonProps) => {
   return (
     <MiuButton
-      sx={{ ...STButton[buttonSize], ...STButton }}
+      sx={{ ...STButton[buttonSize], ...STButton,...styles }}
       fullWidth
       disableElevation={true}
       startIcon={startIcon}

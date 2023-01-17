@@ -7,5 +7,5 @@ export const STContainer ={
     borderWidth: '0px 6px !important',
     borderRadius: '50% ',
     borderStyle: 'solid',
-    borderColor:'#0288d1'
+    borderColor:'primary.main'
 }
