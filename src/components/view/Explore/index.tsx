@@ -26,7 +26,7 @@ const ExploreView = () => {
           <Tab label={t('books')} value="books" />
           <Tab label={t('people')} value="people" />
         </Tabs>
-        <SCNotificationsBell />
+        <SCNotificationsBell  notificationNum={4}/>
       </Stack>
       {TABS[selectedTab]}
     </>

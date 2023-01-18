@@ -1,10 +1,11 @@
 import { Badge } from '@mui/material'
 import { Bell } from '@/constants'
 import { SCSvgIcons } from '@/components/shared'
+import INotificationsBell from './interfaces'
 
-const SCNotificationsBell = () => {
+const SCNotificationsBell = ({notificationNum}:INotificationsBell) => {
   return (
-    <Badge badgeContent={4} color='primary' >
+    <Badge badgeContent={notificationNum} color='primary' >
       <SCSvgIcons icon={Bell} color='inherit'  />
     </Badge>
   )
