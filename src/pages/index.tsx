@@ -1,7 +1,7 @@
-import ButtonMode from 'components/shared/ButtonMode'
+import HomeView from '@/components/view/Home' 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-const HomePage = () => <ButtonMode />
+const HomePage = () => <HomeView />
 
 export const getStaticProps = async ({ locale = 'en' }: any) => ({
   props: {
