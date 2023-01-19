@@ -14,7 +14,7 @@ import {
   STOwner,
   STContainer,
   STBookInfoContainer,
-  STBackButton
+  STBackButton,
 } from './styles'
 
 const bookDetails = [
@@ -36,19 +36,20 @@ const bookDetails = [
     price: 3,
     owner: ' Tom Reeves',
     avatar: IMAGES.avatarPlaceholder,
-    distance: '50 kilometers',}
+    distance: '50 kilometers',
+  },
 ]
 
 const MapExploreList = () => {
   return (
     <>
-    <SCBackButton sx={STBackButton}  />
+      <SCBackButton sx={STBackButton} />
       {bookDetails.map((book) => (
         <React.Fragment key={book.id}>
           <Stack sx={STContainer}>
             <SCBookCover cover={book.cover} size="xl" title={book.bookName} />
             <Stack sx={STBookInfoContainer}>
-              <Typography   component="p" variant="h4">
+              <Typography component="p" variant="h4">
                 {book.bookName}
               </Typography>
               <Typography component="p" variant="body1">
@@ -69,7 +70,7 @@ const MapExploreList = () => {
               </Button>
             </Stack>
           </Stack>
-          {bookDetails[bookDetails.length - 1] !== book && <SCDivider />}
+          <SCDivider />
         </React.Fragment>
       ))}
     </>
