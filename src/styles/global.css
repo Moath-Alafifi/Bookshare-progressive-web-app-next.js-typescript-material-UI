@@ -1,8 +1,19 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
- 
 }
- 
+
+a,
+a:visited,
+a:link,
+a:hover,
+a:active {
+  color: unset;
+  text-decoration: none;
+}
+
+/* remove divider if it the last child */
+div:last-of-type + hr {
+  display: none;
+}

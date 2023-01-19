@@ -44,7 +44,7 @@ const BooksIGave = () => {
             isBookStateHidden={true}
             isEditIconHidden={true}
           />
-          {activityData[activityData.length - 1] !== book && <SCDivider />}
+          <SCDivider />
         </React.Fragment>
       ))}
     </>

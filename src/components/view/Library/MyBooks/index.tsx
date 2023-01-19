@@ -44,7 +44,7 @@ const MyBooks = () => {
             isBookStateHidden={false}
             isEditIconHidden={false}
           />
-          {activityData[activityData.length - 1] !== book && <SCDivider />}
+          <SCDivider />
         </React.Fragment>
       ))}
     </>

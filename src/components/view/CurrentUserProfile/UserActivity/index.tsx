@@ -50,7 +50,7 @@ const UserActivity = () => {
               isEditIconHidden={true}
             />
           )}
-          {activityData[activityData.length - 1] !== behavior && <SCDivider />}
+          <SCDivider />
         </React.Fragment>
       ))}
     </>

@@ -35,7 +35,12 @@ const UserCredits = () => {
     <>
       <Stack sx={STInfoContainer}>
         <SCUserCredits creditsNum={0} />
-        <SCChip icon={Info} label="What are credits?" iconColor='disabled' styles={STChip} />
+        <SCChip
+          icon={Info}
+          label="What are credits?"
+          iconColor="disabled"
+          styles={STChip}
+        />
       </Stack>
       {activityData.map((credit: IUserCredits) => (
         <React.Fragment key={credit.id}>
@@ -45,7 +50,7 @@ const UserCredits = () => {
             verb={credit.verb}
             creditsNum={credit.creditsNum}
           />
-          {activityData[activityData.length - 1] !== credit && <SCDivider />}
+          <SCDivider />
         </React.Fragment>
       ))}
     </>

@@ -73,9 +73,7 @@ const HomeView = () => {
             avatar={activity.avatar}
             time={activity.date}
           />
-          {activitiesData[activitiesData.length - 1] !== activity && (
-            <SCDivider />
-          )}
+          <SCDivider />
         </React.Fragment>
       ))}
     </>
