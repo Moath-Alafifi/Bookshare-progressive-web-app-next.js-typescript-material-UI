@@ -1,8 +1,11 @@
-const ROUTES ={
-    home:"/",
-    explore:'/explore',
-    myLibrary: '/myLibrary',
-    chat:'/chat',
-    profile:'/profile'
+const ROUTES = {
+  home: {
+    main: '/',
+    mapExploreList: '/home/map-explore-list',
+  },
+  explore: '/explore',
+  myLibrary: '/my-library',
+  chat: '/chat',
+  profile: '/profile',
 }
 export default ROUTES
