@@ -29,3 +29,5 @@ export { default as SCUserBio } from './UserBio'
 export { default as SCUserLocation } from './UserLocation'
 export { default as SCUserReadingLevel } from './UserReadingLevel'
 export { default as SCUserActivityStatus } from './UserActivityStatus'
+export { default as SCStandardHeader } from './StandardHeader'
+
