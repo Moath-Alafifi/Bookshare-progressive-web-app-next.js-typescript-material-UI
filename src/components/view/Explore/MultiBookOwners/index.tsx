@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, Button } from '@mui/material'
+import { Stack, Typography, Button } from '@mui/material'
 import {
   UserAvatar,
   SCSvgIcons,
@@ -6,14 +6,13 @@ import {
   UserLocation,
   SCDivider,
 } from '@/components/shared'
-import { Arrow } from '@/constants'
+import { Arrow, IMAGES } from '@/constants'
 import IOwnersData from '../interfaces'
 import React from 'react'
 import {
-  STAvatar,
   STButton,
   STOwner,
-  STOwnersContainer,
+  STContainer,
   STOwnersInfoContainer,
   STOwnersText,
 } from './styles'
@@ -28,10 +27,8 @@ const MultiBookOwners = ({ ownersData }: IOwnersData) => {
       </Stack>
       {ownersData.map((owner) => (
         <React.Fragment key={owner.id}>
-          <Stack sx={STOwnersContainer}>
-            <Box sx={STAvatar}>
-              <UserAvatar avatar={owner.avatar} size="xxl" />
-            </Box>
+          <Stack sx={STContainer}>
+            <UserAvatar avatar={owner.avatar} size="xxl" />
             <Stack sx={STOwnersInfoContainer}>
               <Typography component="p" variant="body1">
                 Owned by
@@ -39,7 +36,7 @@ const MultiBookOwners = ({ ownersData }: IOwnersData) => {
                   {owner.owner}
                 </Typography>
               </Typography>
-              <UserCredits creditsNum={0} />
+              <UserCredits creditsNum={owner.price} />
               <UserLocation userLocation={owner.distance} />
               <Button
                 sx={STButton}
@@ -51,7 +48,7 @@ const MultiBookOwners = ({ ownersData }: IOwnersData) => {
               </Button>
             </Stack>
           </Stack>
-          <SCDivider />
+          {ownersData[ownersData.length - 1] !== owner && <SCDivider />}
         </React.Fragment>
       ))}
     </>

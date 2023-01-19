@@ -1,25 +1,25 @@
 export const STOwnersText = {
-  mt: 3,
+  margin: '24px 0px',
   justifyContent: 'center',
-  color:'text.secondary'
+  color: 'text.secondary',
 }
-export const STAvatar = {
-  width: '30vw',
-}
-export const STOwnersContainer = {
+
+export const STContainer = {
   alignItems: 'center',
-  m: 2,
+  margin: '16px 0px',
+  gap: 3,
 }
+
 export const STOwnersInfoContainer = {
   flexDirection: 'column',
-  mt: 1.5,
   alignItems: 'flex-start',
   justifyContent: 'center',
   gap: 1,
-  width: '70vw',
-  color: 'text.secondary'
+  width: '100%',
 }
-export const STOwner = { color: 'secondary.contrastText',}
+export const STOwner = {
+  color: 'text.secondary',
+}
 export const STButton = {
   justifyContent: 'space-between',
 }

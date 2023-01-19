@@ -1,13 +1,13 @@
 import { SCSvgIcons } from '@/components/shared'
 import { BackArrow } from '@/constants'
-import { ButtonBase } from '@mui/material'
+import { ButtonBase, ButtonBaseProps } from '@mui/material'
 import { useRouter } from 'next/router'
 
-const SCBackButton = () => {
+const SCBackButton = (props: ButtonBaseProps) => {
   const router = useRouter()
   return (
-    <ButtonBase onClick={() => router.back()}>
-      <SCSvgIcons icon={BackArrow}  />
+    <ButtonBase onClick={() => router.back()} {...props}>
+      <SCSvgIcons icon={BackArrow} color="inherit" />
     </ButtonBase>
   )
 }

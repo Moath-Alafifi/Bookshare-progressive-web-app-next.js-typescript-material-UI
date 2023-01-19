@@ -10,7 +10,7 @@ export const tabsData = (translate: any): ITabData[] => {
       id: 1,
       icon: Home,
       tabName: translate('Home'),
-      path: ROUTES.home,
+      path: ROUTES.home.main,
       value:'home'
     },
     {
@@ -18,7 +18,7 @@ export const tabsData = (translate: any): ITabData[] => {
       icon: Library,
       tabName: translate('my Library'),
       path: ROUTES.myLibrary,
-      value:'myLibrary'
+      value:'my-library'
     },
     {
       id: 3,

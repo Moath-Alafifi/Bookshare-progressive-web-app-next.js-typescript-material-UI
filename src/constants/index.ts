@@ -25,6 +25,8 @@ export { default as Plus } from '/public/assets/svgs/plus.svg'
 export { default as Public } from '/public/assets/svgs/public.svg'
 export { default as Private } from '/public/assets/svgs/private.svg'
 export { default as Edit } from '/public/assets/svgs/edit.svg'
+export { default as Menu } from '/public/assets/svgs/rounded-menu.svg'
+
 
 
 

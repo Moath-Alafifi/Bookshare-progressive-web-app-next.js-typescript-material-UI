@@ -11,7 +11,7 @@ const SCButton = ({
 }: IButton & ButtonProps) => {
   return (
     <MiuButton
-      sx={{ ...STButton[buttonSize], ...STButton,...styles }}
+      sx={{ ...STButton[buttonSize], ...STButton, ...styles }}
       fullWidth
       disableElevation={true}
       startIcon={startIcon}

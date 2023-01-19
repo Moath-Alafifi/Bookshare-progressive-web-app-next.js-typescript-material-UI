@@ -5,8 +5,10 @@ import {
   SCNotificationsBell,
   SCUserCredits,
 } from '@/components/shared'
-import { IMAGES } from '@/constants'
+import { IMAGES, ROUTES } from '@/constants'
 import { Box, Stack, Typography } from '@mui/material'
+import { useRouter } from 'next/router'
+import React from 'react'
 import ActivityList from './ActivityList'
 import { STHeaderContainer, STActivityText } from './styles'
 const activitiesData = [
@@ -27,6 +29,10 @@ const activitiesData = [
 ]
 
 const HomeView = () => {
+  const router = useRouter()
+  const redirectToBookListPage = () => {
+    router.push(ROUTES.home.mapExploreList)
+  }
   return (
     <>
       <Stack sx={STHeaderContainer}>
@@ -50,6 +56,7 @@ const HomeView = () => {
           sx={{ width: 280, height: 280, backgroundColor: 'background.paper' }}
         ></Box>
         <SCButton
+          onClick={redirectToBookListPage}
           buttonSize="md"
           text="View as list"
           styles={{ color: 'primary.contrastText' }}
@@ -59,19 +66,17 @@ const HomeView = () => {
         Activity
       </Typography>
       {activitiesData.map((activity) => (
-        <>
+        <React.Fragment key={activity.id}>
           <ActivityList
-            key={activity.id}
             activity={activity.activity}
             userName={activity.userName}
             avatar={activity.avatar}
             time={activity.date}
           />
-          {console.log(activitiesData[activitiesData.length - 1], activity)}
           {activitiesData[activitiesData.length - 1] !== activity && (
             <SCDivider />
           )}
-        </>
+        </React.Fragment>
       ))}
     </>
   )

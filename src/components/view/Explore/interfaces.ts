@@ -6,6 +6,7 @@ interface IOwnersData {
     owner: string
     avatar: string
     bookDescription?: string
+    price:number
   }[]
 }
 export default IOwnersData

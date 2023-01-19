@@ -21,4 +21,9 @@ export const STButton = {
     maxWidth: 82,
     fontSize: '0.8125rem', // 13px
   },
+  xs:{
+    height: 24,
+    maxWidth: 50,
+    fontSize: '0.875rem', // 14px
+  }
 }
