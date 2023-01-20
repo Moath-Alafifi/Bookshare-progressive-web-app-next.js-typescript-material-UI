@@ -2,10 +2,15 @@ const ROUTES = {
   home: {
     main: '/',
     mapExploreList: '/home/map-explore-list',
+    notification:'/home/notification'
   },
   explore: '/explore',
   myLibrary: '/my-library',
-  chat: '/chat',
+  chat: {
+    main:'/chat',
+    UserChat:'/chat/user-chat'
+  },
+
   profile: '/profile',
 }
 export default ROUTES

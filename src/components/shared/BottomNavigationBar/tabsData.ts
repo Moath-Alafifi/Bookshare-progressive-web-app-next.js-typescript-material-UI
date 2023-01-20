@@ -31,7 +31,7 @@ export const tabsData = (translate: any): ITabData[] => {
       id: 4,
       icon: Chat,
       tabName: translate('Chat'),
-      path: ROUTES.chat,
+      path: ROUTES.chat.main,
       value:'chat'
     },
     {
