@@ -9,8 +9,9 @@ import {
   STTitle,
 } from './styles'
 import { SCUserAvatar } from '@/components/shared'
-import { IMAGES } from '@/constants'
+import { IMAGES, ROUTES } from '@/constants'
 import React from 'react'
+import Link from 'next/link'
 
 const ChatData = [
   {
@@ -49,14 +50,16 @@ const ChatView = () => {
       {ChatData.map((user) => (
         <React.Fragment key={user.id}>
           <Stack sx={STContainer}>
-            <Badge
-              sx={true ? STActiveBadge : STInActiveBadge}
-              overlap="circular"
-              anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-              variant="dot"
-            >
-              <SCUserAvatar avatar={user.avatar} size="md" />
-            </Badge>
+            <Link href={`${ROUTES.chat.UserChat}/${user.id}`}>
+              <Badge
+                sx={true ? STActiveBadge : STInActiveBadge}
+                overlap="circular"
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                variant="dot"
+              >
+                <SCUserAvatar avatar={user.avatar} size="md" />
+              </Badge>
+            </Link>
 
             <Stack sx={{ flexDirection: 'column', minWidth: 0 }} gap={1}>
               <Typography component="p" variant="subtitle1">

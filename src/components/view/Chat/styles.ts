@@ -9,14 +9,12 @@ export const STTitle = {
   mb: 4,
 }
 export const STContainer = {
-  flexDirection: 'row',
   alignItems: 'center',
   margin: '16px 0px 16px 0px',
   gap: 1,
 }
 
 export const STInviteFriend = {
-  flexDirection: 'row',
   alignItems: 'center',
   textAlign: 'center',
   width: 270,
