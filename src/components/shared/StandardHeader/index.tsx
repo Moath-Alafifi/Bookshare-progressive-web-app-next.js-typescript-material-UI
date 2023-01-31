@@ -20,7 +20,7 @@ const SCStandardHeader = ({
       {!isLeftIconHidden && (
         <Box sx={STLeftIcon}>
           {!isMenuIconHidden ? (
-            <SCSvgIcons icon={Menu} color="inherit" />
+            <SCSvgIcons icon={Menu} color="disabled" />
           ) : (
             <SCButton buttonSize="xs" text="clear All" variant="text" />
           )}
