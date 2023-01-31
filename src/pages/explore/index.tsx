@@ -1,7 +1,7 @@
 import ExploreView from '@/components/view/Explore'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-const explorePage = () => <ExploreView />
+const ExplorePage = () => <ExploreView />
 
 export const getStaticProps = async ({ locale = 'en' }: any) => ({
   props: {
@@ -10,4 +10,4 @@ export const getStaticProps = async ({ locale = 'en' }: any) => ({
 })
 
 
-export default explorePage
+export default ExplorePage
