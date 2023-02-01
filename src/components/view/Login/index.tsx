@@ -15,8 +15,6 @@ const LoginView = () => {
       dispatch
     )
   }
-  const {user}=useContext(AuthContext)
-   
   return (
     <Paper
       onSubmit={onSubmitHandler}

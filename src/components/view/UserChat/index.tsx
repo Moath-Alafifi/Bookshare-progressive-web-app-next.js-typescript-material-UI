@@ -19,7 +19,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useRef, useState } from 'react'
 
 import io from 'Socket.io-client'
-import Massage from './Massage'
+import Massage from './Message'
 import {
   STButtonsContainer,
   STChattingWithInfoContainer,

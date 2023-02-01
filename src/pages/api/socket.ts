@@ -1,5 +1,4 @@
 import { Server } from 'Socket.IO'
-import { instrument } from '@socket.io/admin-ui'
 
 const SocketHandler = (req, res) => {
   if (res.socket.server.io) {
@@ -7,15 +6,34 @@ const SocketHandler = (req, res) => {
   } else {
     console.log('Socket is initializing')
     const io = new Server(res.socket.server)
-
     res.socket.server.io = io
+    let users = []
+
+    const addUser = (userId, socketId) => {
+      !users.some((user) => user.userId === userId) &&
+        users.push({ userId, socketId })
+    }
+
+    const getUser = (userId) => {
+      return users.find((user) => user.userId === userId)
+    }
+
     io.on('connection', (socket) => {
-      socket.on('massage-change', (msg) => {
-        io.emit('update-massage', msg)
+      //take userId and socketId from user
+      socket.on('addUser', (userId) => {
+        addUser(userId, socket.id)
+        io.emit('getUsers', users)
+      })
+
+      socket.on('sendMessage', ({ senderId, receiverId, text }) => {
+        const user = getUser(receiverId)
+        console.log(user)
+        io.to(user?.socketId).emit('getMessage', {
+          senderId,
+          text,
+        })
       })
     })
-
-    // instrument(io, { auth: false })
   }
   res.end()
 }

@@ -89,7 +89,7 @@ const ExplorePeople = () => {
                   buttonSize="sm"
                   color="secondary"
                   text="follow"
-                  styles={{ color: 'text.secondary' }}
+                  styles={{ color: 'text.main' }}
                   onClick={() => handleFollowed(user.id)}
                 />
               )}

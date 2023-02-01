@@ -1,29 +1,32 @@
-import dbConnect from '@/../lib/mongo'
-import Conversation from '@/../models/Conversation'
+import dbConnect from '@/../server/lib/mongo'
+import Conversation from '@/../server/models/Conversation'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default async function handler(
+const conversationHandler = async (
   req: NextApiRequest,
   res: NextApiResponse
-) {
+) => {
   const { method } = req
   await dbConnect()
+ 
   switch (method) {
     case 'GET':
       try {
         const conversations = await Conversation.find({})
         res.status(200).json(conversations)
       } catch (error) {
-        res.status(400).json({ success: false })
+        res.status(400).json(error)
       }
       break
     case 'POST':
+      const newConversation = new Conversation({
+        members: [req.body.senderId, req.body.receiverId],
+      });
       try {
-        const conversations = await Conversation.create(req.body)
-        res.status(201).json(conversations)
+        const savedConversation  = await newConversation.save()
+        res.status(201).json(savedConversation )
       } catch (error) {
-        const conversations = await Conversation.create(req.body)
-        res.status(400).json(conversations)
+        res.status(400).json(error)
       }
       break
     default:
@@ -31,3 +34,4 @@ export default async function handler(
       break
   }
 }
+export default conversationHandler
