@@ -1,25 +1,25 @@
 import mongoose, { Schema, Document, Model } from 'mongoose'
 
-interface IAuthUser extends Document {
+interface IAuth extends Document {
   _id: string
-  userName: string
   email: string
+  password: string
   timestamps: {
     createdAt: 'createdAt'
     updatedAt: 'updatedAt'
   }
 }
 
-const authUserSchema = new Schema<IAuthUser>(
+const authSchema = new Schema<IAuth>(
   {
-    userName: {
+    email: {
       type: String,
     },
-    email: {
+    password: {
       type: String,
     },
   },
   { timestamps: true }
 )
-export default (mongoose.models.AuthUser as Model<IAuthUser>) ||
-  mongoose.model<IAuthUser>('AuthUser', authUserSchema)
+export default (mongoose.models.Auth as Model<IAuth>) ||
+  mongoose.model<IAuth>('Auth', authSchema)

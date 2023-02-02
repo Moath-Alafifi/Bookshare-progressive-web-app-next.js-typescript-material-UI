@@ -1,7 +1,7 @@
 import mongoose, { Schema, Types, Document, Model } from 'mongoose'
 interface IConversation extends Document {
   _id: string
-  members: Types.Array<string>
+  members?: Types.Array<string>
   senderId: string
   receiverId: string
   timestamps: {
