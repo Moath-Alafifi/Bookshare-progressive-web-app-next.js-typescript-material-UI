@@ -17,12 +17,12 @@ const SocketHandler = (req, res) => {
     const getUser = (userId) => {
       return users.find((user) => user.userId === userId)
     }
-
     io.on('connection', (socket) => {
-      //take userId and socketId from user
+          //take userId and socketId from user
       socket.on('addUser', (userId) => {
         addUser(userId, socket.id)
         io.emit('getUsers', users)
+        console.log(users);
       })
 
       socket.on('sendMessage', ({ senderId, receiverId, text }) => {

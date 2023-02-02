@@ -6,29 +6,29 @@ const conversationHandler = async (
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
-  const { method } = req
+  const {
+    method,
+    query: { slug },
+  } = req
+
   await dbConnect()
- 
   switch (method) {
     case 'GET':
+      //get conversation of a tow users or one user
       try {
-        const conversations = await Conversation.find({})
+        const conversations =
+          (await Conversation.find({
+            members: { $all: slug },
+          })) ||
+          Conversation.find({
+            members: { $in: [slug[0]] },
+          })
         res.status(200).json(conversations)
       } catch (error) {
         res.status(400).json(error)
       }
       break
-    case 'POST':
-      const newConversation = new Conversation({
-        members: [req.body.senderId, req.body.receiverId],
-      });
-      try {
-        const savedConversation  = await newConversation.save()
-        res.status(201).json(savedConversation )
-      } catch (error) {
-        res.status(400).json(error)
-      }
-      break
+
     default:
       res.status(400).json({ success: false })
       break
