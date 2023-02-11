@@ -29,7 +29,7 @@ import {
   STUnFollowButton,
 } from './styles'
 
-const UserChatView = () => {
+const ConversationView = () => {
   return (
     <>
       <SCStandardHeader headerText="Chatting with" />
@@ -88,4 +88,4 @@ const UserChatView = () => {
   )
 }
 
-export default UserChatView
+export default ConversationView

@@ -8,7 +8,7 @@ const ROUTES = {
   myLibrary: '/my-library',
   chat: {
     main:'/chat',
-    UserChat:'/chat/user-chat'
+    conversation:'/chat/conversation'
   },
 
   profile: '/profile',

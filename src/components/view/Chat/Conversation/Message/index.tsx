@@ -21,69 +21,48 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 import React, { useContext, useEffect, useState } from 'react'
 
- 
 const Message = () => {
   const [messages, setMessages] = useState([])
+
   const [socketId, setSocketId] = useState('')
-  const [newMessage, setNewMessage] = useState('')
-  const [arrivalMessage, setArrivalMessage] = useState(null)
-  const [currentChat, setCurrentChat] = useState(null)
-  const [onlineUsers, setOnlineUsers] = useState([])
+  const [newMessage, setNewMessage] = useState(null)
+ 
 
-  const router = useRouter()
   const { user } = useContext(AuthContext)
-  const socket = useSocket()
+  const { socket, conversations } = useSocket()
 
-  useEffect(() => {
-    socket?.emit('addUser', user._id)
-    socket?.on('getUsers', (users) => {
-      console.log(users.filter((f) => f.userId === user?._id))
-      setOnlineUsers(users.filter((f) => f.userId === user?._id))
-    })
-  }, [user])
-  useEffect(() => {
-   
-    socket?.on('getMessage',(data)=>{
-      setArrivalMessage(data);
-    })
-  }, [])
- console.log(arrivalMessage)
+  socket?.on('connect', () => {
+ 
+    setSocketId(socket.id)
+  })
+ 
+  
+   socket?.on('getMessage', ({ senderId, text }) => {
+     setNewMessage({ senderId, text })
+   })
+ 
+ 
   const onSubmitHandler = async (e: any) => {
     e.preventDefault()
-    
-      const message = {
-        sender: user._id,
-        text: newMessage,
-        conversationId: currentChat._id,
-      };
-  
-      const receiverId = currentChat.members.find(
-        (member) => member !== user._id
-      );
-  
-      socket.emit("sendMessage", {
-        senderId: user._id,
-        receiverId,
-        text: newMessage,
-      });
-  
-      try {
-        const res = await axios.post("/messages", message);
-        setMessages([...messages, res.data]);
-        setNewMessage("");
-      } catch (err) {
-        console.log(err);
-      }
-    };
-  
+  }
+
+ 
+ 
   const messageHandler = (e) => {
     if (e.target.value === '') return
-    setNewMessage(e.target.value)
+    
     if (e.keyCode === 13) {
+      const reserverId   = conversations.map((m) => m.members.find(m=> m !== user._id) )
+      console.log(reserverId)
+        socket?.emit('sendMessage', {
+          senderId: user?._id,
+          text: e.target.value,
+          reserverId:reserverId[0]  
+        })
       e.target.value = null
     }
   }
-
+ 
   return (
     <>
       <Stack sx={{ flexDirection: 'column', width: '100%', height: 350 }}>
@@ -99,9 +78,9 @@ const Message = () => {
           subheader={<li />}
         >
           <ListSubheader>{socketId}</ListSubheader>
-          {messages.map((msg, i) => (
+        
             <ListItem
-              key={i}
+            
               sx={{
                 fontSize: 13,
                 backgroundColor: 'primary.light',
@@ -112,9 +91,10 @@ const Message = () => {
                 m: '4px 16px 4px 16px',
               }}
             >
-              {msg}
+             {newMessage?.text}  ////
+             {newMessage?.senderId}
             </ListItem>
-          ))}
+  
         </List>
 
         <Paper
