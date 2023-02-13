@@ -1,9 +1,9 @@
-import { getConversation } from '@/pages/api/apiCalls/chat'
+import { getConversation } from '@/pages/api/apiCalls/conversations'
 import { useQuery } from 'react-query'
 
 const useGetConversation = () => {
-  const getConversations = useQuery('getConversation', getConversation)
-  return getConversations
+  const conversations = useQuery('getConversation', getConversation)
+  return conversations as any
 }
 
 export default useGetConversation
