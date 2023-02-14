@@ -1,30 +1,22 @@
-import { Stack, Typography, Divider, Badge } from '@mui/material'
+import { Stack, Typography, Divider } from '@mui/material'
 import { STContainer, STInviteFriend, STTitle } from './styles'
- 
-import { IMAGES, ROUTES } from '@/constants'
-import React, { useContext, useEffect, useState } from 'react'
-import Link from 'next/link'
-
-import useSocket from '@/hooks/useSocket'
-import axios from 'axios'
+import React, { useContext } from 'react'
 import { AuthContext } from '@/contexts/AuthContext'
-import Conversation from './ChatMembers.tsx'
 import ChatMembers from './ChatMembers.tsx'
- 
+import useGetConversation from '@/hooks/useGetConversation'
+
 const ChatView = () => {
   const { user } = useContext(AuthContext)
-  const { conversations,socket } = useSocket()
-  // useEffect(()=>{
 
-  //   socket?.emit('addUser', user?._id )
-  // },[user?._id])
+  const conversations = useGetConversation(user?._id)
+ 
   return (
     <>
       <Typography component="p" variant="h2" sx={STTitle}>
         Chat History
       </Typography>
 
-      {conversations.map((c) => (
+      {conversations?.data?.map((c) => (
         <React.Fragment key={c._id}>
           <Stack sx={STContainer}>
             <ChatMembers conversation={c} currentUser={user} />
